@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --color-primary: hsl(47, 88%, 63%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey: hsl(0, 0%, 50%);
+  --color-black: hsl(0, 0%, 7%);
+
+  --fs-smallest: calc(12 / 16 * 1rem);
+  --fs-small: calc(14 / 16 * 1rem);
+  --fs-medium: 1rem;
+  --fs-large: calc(20 / 16 * 1rem);
+  --fs-xlarge: calc(24 / 16 * 1rem);
+
+  --rounded-small: 4px;
+  --rounded-medium: 10px;
+  --rounded-large: 20px;
+}
+
+* {
+  font-family: 'Figtree', sans-serif;
+}
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+}
+
+main {
+  display: grid;
+  height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.card {
+  max-width: calc(384 / 16 * 1rem);
+  margin: auto;
+  padding: 24px;
+  background-color: var(--color-white);
+  border-radius: var(--rounded-large);
+  border: 1px solid var(--color-black);
+  box-shadow: 8px 8px 0 var(--color-black);
+}
+
+.card-image {
+  border-radius: var(--rounded-medium);
+  overflow: hidden;
+}
+
+.card-content {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.card-content time {
+  display: block;
+  font-size: var(--fs-smallest);
+  margin-top: calc(12 / 16 * 1rem);
+  margin-bottom: calc(12 / 16 * 1rem);
+}
+
+.card-content a {
+  display: block;
+  margin-bottom: calc(12 / 16 * 1rem);
+  text-decoration: none;
+  font-size: var(--fs-large);
+  font-weight: 800;
+  color: var(--color-black);
+}
+
+.card-content a:hover {
+  color: var(--color-primary);
+}
+
+.card-content p {
+  font-size: var(--fs-small);
+  color: var(--color-grey);
+  font-weight: 500;
+}
+
+.card-avatar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-avatar figcaption {
+  font-size: var(--fs-small);
+  font-weight: 800;
+}
+
+.label {
+  width: fit-content;
+  font-size: var(--fs-smallest);
+  background-color: var(--color-primary);
+  border-radius: var(--rounded-small);
+  padding: 4px 12px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+}
+
+/* Utility */
+.bold {
+  font-weight: 800;
+}
