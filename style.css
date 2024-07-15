@@ -12,6 +12,11 @@
   --fs-large: calc(20 / 16 * 1rem);
   --fs-xlarge: calc(24 / 16 * 1rem);
 
+  /* fluid fs start at 360px and end at 840px */
+  --fs-body-s: clamp(var(--fs-smallest), 0.417vw + 0.656rem, var(--fs-small));
+  --fs-body-m: clamp(var(--fs-small), 0.417vw + 0.781rem, var(--fs-medium));
+  --fs-heading: clamp(var(--fs-large), 1.0625rem + 0.8333vw, var(--fs-xlarge));
+
   --rounded-small: 4px;
   --rounded-medium: 10px;
   --rounded-large: 20px;
@@ -55,7 +60,7 @@ main {
 
 .card-content time {
   display: block;
-  font-size: var(--fs-smallest);
+  font-size: var(--fs-body-s);
   margin-top: calc(12 / 16 * 1rem);
   margin-bottom: calc(12 / 16 * 1rem);
 }
@@ -64,7 +69,7 @@ main {
   display: block;
   margin-bottom: calc(12 / 16 * 1rem);
   text-decoration: none;
-  font-size: var(--fs-large);
+  font-size: var(--fs-heading);
   font-weight: 800;
   color: var(--color-black);
 }
@@ -74,7 +79,7 @@ main {
 }
 
 .card-content p {
-  font-size: var(--fs-small);
+  font-size: var(--fs-body-m);
   color: var(--color-grey);
   font-weight: 500;
 }
@@ -86,13 +91,13 @@ main {
 }
 
 .card-avatar figcaption {
-  font-size: var(--fs-small);
+  font-size: var(--fs-small); /* using fs-small bcs expected fs still 14px */
   font-weight: 800;
 }
 
 .label {
   width: fit-content;
-  font-size: var(--fs-smallest);
+  font-size: var(--fs-body-s);
   background-color: var(--color-primary);
   border-radius: var(--rounded-small);
   padding: 4px 12px;
