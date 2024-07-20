@@ -65,16 +65,15 @@ main {
   margin-bottom: calc(12 / 16 * 1rem);
 }
 
-.card-content a {
-  display: block;
+.card-content h1 {
+  cursor: pointer;
   margin-bottom: calc(12 / 16 * 1rem);
-  text-decoration: none;
   font-size: var(--fs-heading);
   font-weight: 800;
   color: var(--color-black);
 }
 
-.card-content a:hover {
+.card-content h1:hover {
   color: var(--color-primary);
 }
 
